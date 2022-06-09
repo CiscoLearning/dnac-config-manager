@@ -31,8 +31,9 @@ def get_device_list():
     devicesuid_list = []
     for device in devices.response:
         if device.family == 'Switches and Hubs':
+            print("Managed Device IP: {} ".format(device.managementIpAddress))
             devicesuid_list.append(device.id)
-    print("Device Management IP {} ".format(device.managementIpAddress))
+    print("\n")
     cmd_run(devicesuid_list)
 
 
@@ -50,13 +51,13 @@ def cmd_run(device_list):
         while task_progress == 'CLI Runner request creation':
             task_progress = dnac.task.get_task_by_id(run_cmd.response.taskId).response.progress
         task_progress= json.loads(task_progress)
-        cmd_output = dnac.file.download_a_file_by_fileid(task_progress['fileId'], dirpath='file.json')
+        cmd_output = dnac.file.download_a_file_by_fileid(task_progress['fileId'], dirpath='file.json', save_file=True)
         print("Saving config for device ... \n")
 
 
 if __name__ == '__main__':
     dnac_creds = {}
-    dnac_creds['url'] = 'https://sandboxdnac2.cisco.com'
+    dnac_creds['url'] = 'https://sandboxdnac.cisco.com'
     dnac_creds['username'] = 'devnetuser'
     dnac_creds['password'] = 'Cisco123!'
 

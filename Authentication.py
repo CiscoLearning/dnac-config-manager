@@ -22,7 +22,7 @@ from dnacentersdk import DNACenterAPI
 import warnings
 
 dnac_creds = {}
-dnac_creds['url'] = 'https://sandboxdnac2.cisco.com'
+dnac_creds['url'] = 'https://sandboxdnac.cisco.com'
 dnac_creds['username'] = 'devnetuser'
 dnac_creds['password'] = 'Cisco123!'
 

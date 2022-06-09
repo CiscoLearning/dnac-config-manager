@@ -9,7 +9,6 @@ This is an *introductory* workshop so if you have played with Cisco DNA Center A
 - Interruptions, questions and heckling are welcomed and encouraged 
 - Have fun!
 
-
 # Learning Objectives
 
 - Define SDK
