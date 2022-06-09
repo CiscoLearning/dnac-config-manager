@@ -12,13 +12,14 @@ IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 or implied.
 """
 
-__author__ = "Kareem Iskander, Lead Tech Advocate"
+__author__ = "Kareem Iskander, Lead Tech Advocate, L&C"
 __version__ = "0.1.0"
 __copyright__ = "Copyright (c) 2022 Cisco and/or its affiliates."
 __license__ = "Cisco Sample Code License, Version 1.1"
 
 
 from dnacentersdk import DNACenterAPI
+import warnings
 
 dnac_creds = {}
 dnac_creds['url'] = 'https://sandboxdnac2.cisco.com'
@@ -27,5 +28,6 @@ dnac_creds['password'] = 'Cisco123!'
 
 
 if __name__ == '__main__':
+    warnings.filterwarnings("ignore")  # this is bad practice and only doing this for live demo cleanliness
     dnac = DNACenterAPI(username=dnac_creds['username'], password=dnac_creds['password'], base_url=dnac_creds['url'], verify=False)
     print("Auth Token: ", dnac.access_token)
