@@ -1,18 +1,11 @@
-# Introduction
+# Cisco DNA Center Config. Manager 
+## Tutorial Guide 👉🏽 <insert link here once published>
+### What you’ll Learn
+- Introduction to Cisco DNA Center SDK
+- Understand Command Runner and usage
+- Code a Configuration Manager
 
-Welcome to **Cisco DNA Center SDK in action** workshop. 
-This is an *introductory* workshop so if you have played with Cisco DNA Center APIs you are in the right place! and if you have not, that's ok too!
-
-
-### Session Rules
-- No boring slides, all of the required tooling will be within your in-browser developer environment
-- Interruptions, questions and heckling are welcomed and encouraged 
-- Have fun!
-
-# Learning Objectives
-
-- Define SDK
-- API vs SDK
-- Setup Cisco DNA Center SDK
-- Define and Build a poor man's config. manager
-
+### What You'll Need
+- Setup [Python 3.x](https://www.python.org/downloads/)
+- Install  [Cisco DNA Center SDK](https://dnacentersdk.readthedocs.io/en/latest/)
+- Access to a [Cisco DNA Center instance](https://devnetsandbox.cisco.com/RM/Diagram/Index/c3c949dc-30af-498b-9d77-4f1c07d835f9?diagramType=Topology)
